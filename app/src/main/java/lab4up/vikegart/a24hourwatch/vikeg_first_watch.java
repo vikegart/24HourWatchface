@@ -394,7 +394,9 @@ public class vikeg_first_watch extends CanvasWatchFaceService {
             final float minutesRotation = mCalendar.get(Calendar.MINUTE) * 6f;
 
             final float hourHandOffset = mCalendar.get(Calendar.MINUTE) / 2f;
-            final float hoursRotation = ((mCalendar.get(Calendar.HOUR) * 15f) + hourHandOffset); //15, так как 24 часа
+            //HOUR_OF_DAY возврашает 24 диапазон, а умножаем 15, 360 / 24 = 15
+            //прибавляем 12, чтобы отсчет начинался снизу
+            final float hoursRotation = (((mCalendar.get(Calendar.HOUR_OF_DAY)+12) * 15) + hourHandOffset);
 
             /*
              * Save the canvas state before we can begin to rotate it.
