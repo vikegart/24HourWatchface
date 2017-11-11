@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">24HourWatch</string>
+    <string name="message">Это просто надпись</string>
+    <string name="my_analog_name">Двадцать четыре</string>
+</resources>
